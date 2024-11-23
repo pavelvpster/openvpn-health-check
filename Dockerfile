@@ -1,7 +1,7 @@
 FROM debian:stable-slim
 
 RUN apt update && \
-    apt install -y openvpn iproute2 iputils-ping iputils-tracepath curl && \
+    apt install -y openvpn iproute2 iputils-ping iputils-tracepath dnsutils nmap curl && \
     rm -rf /var/lib/apt/lists/*
 
 COPY docker-entrypoint.sh /usr/bin
